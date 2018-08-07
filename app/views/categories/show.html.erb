@@ -12,12 +12,12 @@
     </thead>
     
     <tbody>
-      <%= @category_posts.each do |post| %>
+      <% @category_posts.each do |post| %>
       <tr>
-        <td>post.name</td>
-        <td>post.genre</td>
-        <td>post.bio</td>
-        <td>post.author</td>
+        <td><%= post.name %></td>
+        <td><%= post.genre %></td>
+        <td><%= post.bio %></td>
+        <td><%= post.author %></td>
         <td><%= link_to post.name, post_path(post) %></td>
       </tr>
     <% end %>
