@@ -10,7 +10,6 @@ class CategoriesController < ApplicationController
     posts.each do |post|
       @category_posts << post if post.category_id == @category.id
     end
-    
   end
 
   def new
