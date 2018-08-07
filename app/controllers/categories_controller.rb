@@ -9,6 +9,7 @@ class CategoriesController < ApplicationController
     posts = Post.all
     posts.each do |post|
       @category_posts << post if post.category_id == @category.id
+    end
     
   end
 
