@@ -6,10 +6,10 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @category_posts = @category.posts
-    posts = Post.all
-    posts.each do |post|
-      @category_posts << post if post.category_id == @category.id
-    end
+    #posts = Post.all
+    #posts.each do |post|
+    #  @category_posts << post if post.category_id == @category.id
+    #end
   end
 
   def new
