@@ -7,7 +7,8 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
     @category_posts = []
     posts = Post.all
-    posts.each do |
+    posts.each do |post|
+      @category_posts << post if post.category_id == @category.id
     
   end
 
